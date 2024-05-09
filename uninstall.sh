@@ -11,4 +11,6 @@ if [ $confirm == "y" ] | [ confirm == "Y" ];then
     echo "Removing..."
     rm "/usr/local/bin/tgoogle"
     echo "Successfully removed."
+    exit 0
 fi
+echo "Abort."
