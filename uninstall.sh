@@ -5,9 +5,7 @@ fi
 
 confirm=""
 read -p "Are you sure (Y/n)? " confirm
-
-
-if [ $confirm == "y" ] | [ confirm == "Y" ];then
+if [ $confirm == "y" ] | [ $confirm == "Y" ];then
     echo "Removing..."
     rm "/usr/local/bin/tgoogle"
     echo "Successfully removed."
