@@ -21,6 +21,7 @@ int main(int argc, char **argv) {
                         printf("© Raphael Tittel\n");
                         printf("usage: tgoogle <search>\n");
 			printf("This is a useful way to use google in your terminal. Make sure you have w3m installed.\n");
+			printf("PLEASE NOTE: If you want to go to the google homepage, run \"tgoogle --home\".\n");
 			return 0;
 		}else if (strcmp(argv[1], "--home")==0) {
                         printf("Going to https://google.com");
