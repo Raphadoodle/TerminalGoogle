@@ -5,6 +5,9 @@ tgoogle: main.o
 main.o: main.c
 	$(CC) -c main.c
 
+clean:
+	rm *.o
+
 install:
 	mv tgoogle /usr/local/bin
 
