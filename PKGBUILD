@@ -32,7 +32,8 @@ build() {
 
 package() {
 	cd terminalgoogle-git
-	sudo make DESTDIR="TerminalGoogle/" install
+        install -Dm644 tgoogle "${pkgdir}/usr/local/bin/tgoogle"
+        chmod +x "${pkgdir}/usr/local/bin/tgoogle"
 	install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 	install -Dm644 README.md "${pkgdir}/usr/share/doc/${pkgname}/README.md"
 }
