@@ -1,11 +1,11 @@
 # Maintainer: Raphael Tittel <raphaeltittel@gmail.com>
-pkgname=TerminalGoogle
+pkgname=terminalgoogle-git
 pkgver=1.00
 pkgrel=1
 epoch=
 pkgdesc="A useful way to use google in your terminal."
 arch=(x86_64)
-url="https://github.com/Raphadoodle/TerminalGoogle.git"
+url="https://github.com/Raphadoodle/terminalgoogle-git.git"
 license=('GPL')
 groups=()
 depends=(gcc gcc-libs w3m)
@@ -25,13 +25,13 @@ sha256sums=('SKIP')
 validpgpkeys=()
 
 build() {
-	cd TerminalGoogle
+	cd terminalgoogle-git
 	make
 }
 
 
 package() {
-	cd TerminalGoogle
+	cd terminalgoogle-git
 	sudo make DESTDIR="TerminalGoogle/" install
 	install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 	install -Dm644 README.md "${pkgdir}/usr/share/doc/${pkgname}/README.md"
