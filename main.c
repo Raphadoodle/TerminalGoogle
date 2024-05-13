@@ -24,7 +24,7 @@ int main(int argc, char **argv) {
 			printf("PLEASE NOTE: If you want to go to the google homepage, run \"tgoogle --home\".\n");
 			return 0;
 		}else if (strcmp(argv[1], "--home")==0) {
-                        printf("Going to https://google.com");
+                        printf("Going to https://google.com\n");
                         system("w3m https://google.com");
                 }else {
 			char urlstring[MAX_LENGTH];
@@ -32,7 +32,7 @@ int main(int argc, char **argv) {
 			replace(urlstring, ' ', '+');
 			char callurl[MAX_LENGTH + 100];
 			snprintf(callurl, sizeof(callurl), "w3m https://google.com/search?q=%s", urlstring);
-			printf("Going to: %s", callurl);
+			printf("Going to: %s\n", callurl);
 			system(callurl);
 		}
     }else {
